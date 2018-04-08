@@ -9,6 +9,8 @@
 /bower_components
 
 # misc
+package-lock.json
+.idea/*
 /.sass-cache
 /connect.lock
 /coverage/*
