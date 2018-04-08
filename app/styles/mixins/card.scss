@@ -1,0 +1,8 @@
+@mixin card(){
+  box-shadow: 0 2px 3px $grey-95;
+  border: 1px solid $grey-90;
+  padding: $card-gutter;
+  margin-bottom: 1em;
+  border-radius: 3px;
+  background: white;
+}

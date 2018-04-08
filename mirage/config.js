@@ -23,4 +23,10 @@ export default function() {
 
     http://www.ember-cli-mirage.com/docs/v0.3.x/shorthands/
   */
+
+  this.get('/user-profiles');
+  this.post('/user-profiles');
+  this.get('/user-profiles/:id');
+  this.put('/user-profiles/:id');
+  this.del('/user-profiles/:id');
 }

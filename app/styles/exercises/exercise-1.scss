@@ -1,0 +1,11 @@
+.user-profiles-list{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  &-item{
+    @include card();
+    min-width: 300px;
+    max-width: 640px;
+    flex: 50%;
+  }
+}

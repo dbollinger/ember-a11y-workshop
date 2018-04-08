@@ -1,1 +1,55 @@
-<h1>Exercise 1</h1>
+<header>
+  <div class="page-header">
+    <h1>Exercise 1</h1>
+    <h2>User Profiles</h2>
+  </div>
+</header>
+<div class="a11y-exercise">
+  <contentinfo role="contentinfo">
+    <h1>Learning Objectives</h1>
+    <div class="a11y-exercise-learning-objectives">
+      <ol>
+        <li>
+          Given an ember component and its relevant test, a developer should be able to use the ember-a11y-testing
+          framework to assert that no a11y violations exist.
+        </li>
+        <li>
+          Given an ember acceptance test, a developer should be able to use the ember-a11y-testing
+          framework to assert that no a11y violations exist.
+        </li>
+      </ol>
+    </div>
+    <h1>Instructions</h1>
+    <div class="a11y-exercise-instructions">
+      <ol>
+        <li>
+          <p>Run the tests for this exercise: <code>ember test -server -f "Exercise 1"</code>.</p>
+        </li>
+        <li>
+          Add an a11y audit to the component's integration test.
+        </li>
+        <li>
+          Fix any accessibility violations found in the component's test.
+        </li>
+        <li>
+          Add an a11y audit to the component's integration test.
+        </li>
+        <li>
+          Fix any accessibility violations found in the acceptance test.
+        </li>
+      </ol>
+    </div>
+  </contentinfo>
+  <main>
+    <h1>Results</h1>
+    <div class="a11y-exercise-results">
+      <ul class="user-profiles-list">
+        {{#each model as |user|}}
+          <li class="user-profiles-list-item">
+            {{user-profile user=user}}
+          </li>
+        {{/each}}
+      </ul>
+    </div>
+  </main>
+</div>
