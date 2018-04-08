@@ -1,3 +1,15 @@
+body, html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+
+  & > .ember-view {
+    height: 100%;
+    width: 100%;
+  }
+}
+
 @import 'ember-burger-menu';
 
 .ember-burger-menu {
