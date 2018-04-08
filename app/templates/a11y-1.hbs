@@ -6,9 +6,9 @@
 </header>
 <div class="a11y-exercise">
   <contentinfo role="contentinfo">
-    <h1>Learning Objectives</h1>
+    <h1 id="ally-learning-objectives">Learning Objectives</h1>
     <div class="a11y-exercise-learning-objectives">
-      <ol>
+      <ol aria-labelledby="ally-learning-objectives">
         <li>
           Given an ember component and its relevant test, a developer should be able to use the ember-a11y-testing
           framework to assert that no a11y violations exist.
@@ -19,11 +19,11 @@
         </li>
       </ol>
     </div>
-    <h1>Instructions</h1>
+    <h1 id="a11y-instructions">Instructions</h1>
     <div class="a11y-exercise-instructions">
-      <ol>
+      <ol aria-labelledby="a11y-instructions">
         <li>
-          <p>Run the tests for this exercise: <code>ember test -server -f "Exercise 1"</code>.</p>
+          <p>From the project directory, run the tests for this exercise: <code>ember test -server -f "Exercise 1"</code>.</p>
         </li>
         <li>
           Add an a11y audit to the component's integration test.
@@ -40,8 +40,8 @@
       </ol>
     </div>
   </contentinfo>
-  <main>
-    <h1>Results</h1>
+  <main aria-labelledby="a11y-results">
+    <h1 id="ally-results">Results</h1>
     <div class="a11y-exercise-results">
       <ul class="user-profiles-list">
         {{#each model as |user|}}
