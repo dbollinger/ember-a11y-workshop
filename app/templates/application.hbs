@@ -1,5 +1,18 @@
-{{!-- The following component displays Ember's default welcome message. --}}
-{{welcome-page}}
-{{!-- Feel free to remove this! --}}
+{{#burger-menu as |burger|}}
+  {{#burger.menu itemTagName="li" as |menu|}}
+    <button {{action burger.state.actions.close}}>Close</button>
 
-{{outlet}}
+    <ul>
+      {{#menu.item}}
+        {{link-to 'Exercise 1' 'a11y-1'}}
+        {{link-to 'Exercise 2' 'a11y-2'}}
+        {{link-to 'Exercise 3' 'a11y-3'}}
+      {{/menu.item}}
+    </ul>
+  {{/burger.menu}}
+
+  {{#burger.outlet}}
+    <button {{action burger.state.actions.toggle}}>Menu</button>
+    {{outlet}}
+  {{/burger.outlet}}
+{{/burger-menu}}
