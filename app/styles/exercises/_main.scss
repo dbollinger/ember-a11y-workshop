@@ -1,0 +1,35 @@
+@import 'exercise-1';
+
+.page-header {
+  border-bottom: 1px solid $grey-80;
+  background: white;
+  margin-bottom: 1em;
+  top: 0;
+  z-index: 5;
+  display: flex;
+  align-items: center;
+  padding: .5rem 1rem;
+  justify-content: space-between;
+}
+
+.a11y-exercise {
+  padding: 1rem;
+  &-learning-objectives {
+    @include card;
+    background: $grey-95;
+    margin-bottom: 1rem;
+  }
+
+  &-instructions {
+    @include card;
+    background: $grey-95;
+    margin-bottom: 1rem;
+  }
+
+  &-results {
+    @include card;
+    background: $grey-99;
+    margin-bottom: 2rem;
+    padding-top: 1rem;
+  }
+}

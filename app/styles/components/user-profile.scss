@@ -1,0 +1,18 @@
+.user-profile {
+  display: flex;
+  &-image {
+    margin-right: 1rem;
+  }
+  &-info {
+    flex: 1;
+    padding-top:.5rem;
+    &-name {
+      font-size: 1.2rem;
+      font-weight: 600;
+    }
+    &-bio {
+      max-height:6em;
+      overflow: auto;
+    }
+  }
+}
