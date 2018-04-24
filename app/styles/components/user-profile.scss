@@ -1,5 +1,8 @@
+
 .user-profile {
   display: flex;
+  padding: $card-gutter;
+  @include card;
   &-image {
     margin-right: 1rem;
   }
@@ -13,6 +16,23 @@
     &-bio {
       max-height:6em;
       overflow: auto;
+      color: $grey-30;
     }
+  }
+  &-engage{
+    align-self: center;
+    margin-left: 1rem;
+    margin-right: .5rem;
+    & svg {
+      transition: transform .3s;
+    }
+    &-remove{
+      svg {
+        transform: rotate(45deg);
+      }
+    }
+  }
+  &.is-selected{
+    background: rgba(#2570D3, .5);
   }
 }

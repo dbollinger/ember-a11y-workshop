@@ -1,0 +1,21 @@
+.a11y-workshop-button {
+  appearance: none;
+  background: white;
+  border: 1px solid $grey-80;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  color: $grey-30;
+  overflow:hidden;
+  & svg {
+    fill: $grey-30;
+  }
+  &:hover, &:focus {
+    box-shadow: 0 0 3px $grey-90;
+    color: $grey-5;
+    & svg {
+      fill: $grey-5;
+    }
+  }
+}
