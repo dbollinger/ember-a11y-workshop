@@ -4,7 +4,7 @@ import { render, find } from '@ember/test-helpers';
 import hbs from 'htmlbars-inline-precompile';
 import EmberObject from '@ember/object';
 import { faker } from 'ember-cli-mirage';
-import a11yAudit from 'ember-a11y-testing/test-support/audit';
+//import a11yAudit from 'ember-a11y-testing/test-support/audit';
 
 module('Component | user-profile | Exercise 1', function(hooks) {
   setupRenderingTest(hooks);
