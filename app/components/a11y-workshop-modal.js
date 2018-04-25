@@ -1,7 +1,7 @@
 import Component from '@ember/component';
-import FocusTrap from '../mixins/focus-trap';
+/*import FocusTrap from '../mixins/focus-trap';*/
 
-export default Component.extend(FocusTrap, {
+export default Component.extend(/*FocusTrap,*/ {
 
   classNames: ['a11y-workshop-modal'],
   attributeBindings: ['tabindex', 'ariaLabelledby:aria-labelledby', 'ariaDescribedby:aria-describedby'],
