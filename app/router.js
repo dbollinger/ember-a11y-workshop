@@ -10,6 +10,7 @@ Router.map(function() {
   this.route('a11y-1');
   this.route('a11y-2');
   this.route('a11y-3');
+  this.route('a11y-activities');
 });
 
 export default Router;

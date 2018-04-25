@@ -1,0 +1,51 @@
+<header>
+  <div class="page-header">
+    <h1>Additional Activities</h1>
+    <div>
+      {{link-to 'View all exercises' 'index'}}
+    </div>
+  </div>
+</header>
+<div class="a11y-exercise">
+  <contentinfo role="contentinfo">
+    <h2 id="a11y-instructions">Instructions</h2>
+    <div class="a11y-exercise-instructions">
+      <p>Choose an activity to test your ember + a11y skills.</p>
+      <ol aria-labelledby="a11y-instructions">
+        <li>Use aria attributes and HTML to improve the <code>user-profile</code> component to give more context to the
+          screen reader by making the buttons unique, and indicating selection state.
+        </li>
+        <li>Adjust the <code>a11y-workshop-modal</code> component interactions so that upon dismiss, it returns focus to the control that opened
+          it. Additionally, enable the escape key so that a user can close the modal using the escape key.
+        </li>
+      </ol>
+    </div>
+  </contentinfo>
+  <main>
+    <h2>Results</h2>
+    <div class="a11y-exercise-results">
+      <div class="exercise-3-controls">
+        {{link-to 'User Profile Exercise Page' 'a11y-1'}}
+      </div>
+      <div class="exercise-3-controls">
+        {{link-to 'Modal Exercise Page' 'a11y-3'}}
+      </div>
+    </div>
+  </main>
+</div>
+
+{{#if showModal}}
+  {{#a11y-workshop-modal}}
+    <h4 class="a11y-3-modal-heading">This is a modal that requires an action!</h4>
+    <label>Make a choice.</label>
+    <select class="a11y-3-modal-select">
+      <option>1</option>
+      <option>2</option>
+      <option>3</option>
+    </select>
+    <div class="a11y-3-modal-options">
+      <button onclick={{action (mut showModal) false}}>Dismiss the modal</button>
+      <button onclick={{action (mut somethingExciting) true}}>Do something</button>
+    </div>
+  {{/a11y-workshop-modal}}
+{{/if}}
