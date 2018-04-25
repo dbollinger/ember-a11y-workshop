@@ -35,21 +35,6 @@
     }
   }
   button[type='submit'] {
-    font-size: 1.1rem;
-    background: white;
-    border: 1px solid $grey-50;
-    padding: .5rem;
-    margin-top: 1rem;
-    margin-bottom: 1rem;
-    cursor: pointer;
-    &:hover, &:focus {
-      text-decoration: underline;
-      box-shadow: 0 0 3px $grey-80;
-    }
-    &:active {
-      text-decoration: underline;
-      background: $grey-99;
-      color: $grey-5;
-    }
+   @include a11y-workshop-button;
   }
 }

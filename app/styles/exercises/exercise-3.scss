@@ -1,0 +1,14 @@
+.exercise-3{
+  &-controls{
+    display: flex;
+    justify-content:space-around;
+    padding-bottom:1rem;
+    align-items:center;
+    & button{
+      @include a11y-workshop-button;
+    }
+  }
+}
+.exercise-3-controls button{
+  @include a11y-workshop-button;
+}
