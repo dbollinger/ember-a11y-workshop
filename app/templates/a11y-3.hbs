@@ -40,12 +40,14 @@
   <main>
     <h2>Results</h2>
     <div class="a11y-exercise-results">
-      <button onclick={{action (mut showModal) (not showModal)}}>Show Modal</button>
-      <div>
-        {{link-to 'Back to all exercises' 'index'}}
-      </div>
-      <div>
-        <button>This button doesn't do anything</button>
+      <div class="exercise-3-controls">
+        <button onclick={{action (mut showModal) (not showModal)}}>Show Modal</button>
+        <div>
+          {{link-to 'Back to all exercises' 'index'}}
+        </div>
+        <div>
+          <button>This button doesn't do anything</button>
+        </div>
       </div>
     </div>
   </main>
