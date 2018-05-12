@@ -25,7 +25,13 @@ module.exports = function(environment) {
 
   ENV['ember-a11y-testing'] = {
     componentOptions: {
-      turnAuditOff: true
+      turnAuditOff: true,
+      // axeCallback: function() {
+      //   console.log('axeCallback: ', ...arguments);
+      // },
+      // axeOptions: defaultAxeOptions,
+      // visualNoiseLevel: 2,
+      // axeViolationClassNames: ['alert-box', 'alert-box--a11y']
     }
   };
 
