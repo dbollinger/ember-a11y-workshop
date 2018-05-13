@@ -10,6 +10,7 @@ Router.map(function() {
   this.route('button-link-text');
   this.route('form-elements');
   this.route('focus-management');
+  this.route('list-children');
 });
 
 export default Router;
