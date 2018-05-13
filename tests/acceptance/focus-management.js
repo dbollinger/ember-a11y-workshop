@@ -6,8 +6,8 @@ import a11yAudit from 'ember-a11y-testing/test-support/audit';
 module('Acceptance | a11y 3 | Exercise 3', function(hooks) {
   setupApplicationTest(hooks);
 
-  test('visiting /a11y-3', async function(assert) {
-    await visit('/a11y-3');
+  test('visiting /focus-management', async function(assert) {
+    await visit('/focus-management');
 
     let axeOptions = {
       rules: {

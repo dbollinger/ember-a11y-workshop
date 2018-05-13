@@ -25,7 +25,7 @@
     <div class="a11y-exercise-instructions">
       <ol aria-labelledby="a11y-instructions">
         <li>Update the <code>a11y-workshop-modal.js</code> component to focus the modal content after it renders.</li>
-        <li>Add an a11y audit to the <code>a11y-3-test.js</code> test.</li>
+        <li>Add an a11y audit to the <code>focus-management-test.js</code> test.</li>
         <li>Fix all accessibility violations.</li>
         <li>Use aria attributes in the <code>a11y-workshop-modal.js</code> component to be labelled by the title in the
           modal.
@@ -53,14 +53,14 @@
 
 {{#if showModal}}
   {{#a11y-workshop-modal}}
-    <h4 class="a11y-3-modal-heading">This is a modal that requires an action!</h4>
+    <h4 class="focus-management-modal-heading">This is a modal that requires an action!</h4>
     <label>Make a choice.</label>
-    <select class="a11y-3-modal-select">
+    <select class="focus-management-modal-select">
       <option>1</option>
       <option>2</option>
       <option>3</option>
     </select>
-    <div class="a11y-3-modal-options">
+    <div class="focus-management-modal-options">
       <button onclick={{action (mut showModal) false}}>Dismiss the modal</button>
       <button onclick={{action (mut somethingExciting) true}}>Do something</button>
     </div>

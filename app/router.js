@@ -9,7 +9,7 @@ const Router = EmberRouter.extend({
 Router.map(function() {
   this.route('button-link-text');
   this.route('form-elements');
-  this.route('a11y-3');
+  this.route('focus-management');
 });
 
 export default Router;
