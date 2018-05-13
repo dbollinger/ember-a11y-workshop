@@ -11,6 +11,7 @@ Router.map(function() {
   this.route('form-elements');
   this.route('focus-management');
   this.route('list-children');
+  this.route('document-structure');
 });
 
 export default Router;
