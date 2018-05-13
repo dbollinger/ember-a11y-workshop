@@ -3,7 +3,7 @@ import { visit } from '@ember/test-helpers';
 import { setupApplicationTest } from 'ember-qunit';
 import a11yAudit from 'ember-a11y-testing/test-support/audit';
 
-module('Acceptance | a11y 2 | Exercise 2', function(hooks) {
+module('Acceptance | Exercise | form elements', function(hooks) {
   setupApplicationTest(hooks);
 
   test('visiting /form-elements', async function(assert) {

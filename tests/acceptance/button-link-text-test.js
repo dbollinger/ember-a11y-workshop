@@ -4,7 +4,7 @@ import { setupApplicationTest } from 'ember-qunit';
 import setupMirage from 'ember-cli-mirage/test-support/setup-mirage';
 import a11yAudit from 'ember-a11y-testing/test-support/audit';
 
-module('Acceptance | a11y 1 | Exercise 1', function(hooks) {
+module('Acceptance | Exercise | button and link text', function(hooks) {
   setupApplicationTest(hooks);
   setupMirage(hooks);
 
