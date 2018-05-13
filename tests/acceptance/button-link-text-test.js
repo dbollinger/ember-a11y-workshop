@@ -8,10 +8,10 @@ module('Acceptance | a11y 1 | Exercise 1', function(hooks) {
   setupApplicationTest(hooks);
   setupMirage(hooks);
 
-  test('visiting /a11y-1', async function(assert) {
+  test('visiting /button-link-text', async function(assert) {
     server.createList('user-profile', 10);
 
-    await visit('/a11y-1');
+    await visit('/button-link-text');
 
     let axeOptions = {}; //just use default options
     await a11yAudit(axeOptions);
