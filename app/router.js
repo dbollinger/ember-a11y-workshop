@@ -12,6 +12,7 @@ Router.map(function() {
   this.route('focus-management');
   this.route('list-children');
   this.route('document-structure');
+  this.route('color-contrast');
 });
 
 export default Router;
