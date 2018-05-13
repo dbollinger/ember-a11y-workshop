@@ -1,5 +1,5 @@
 import { module, test } from 'qunit';
-import { visit } from '@ember/test-helpers';
+import { visit, click } from '@ember/test-helpers';
 import { setupApplicationTest } from 'ember-qunit';
 import a11yAudit from 'ember-a11y-testing/test-support/audit';
 
@@ -8,6 +8,7 @@ module('Acceptance | a11y 3 | Exercise 3', function(hooks) {
 
   test('visiting /focus-management', async function(assert) {
     await visit('/focus-management');
+    await click('.exercise-3-controls>button');
 
     let axeOptions = {
       rules: {
