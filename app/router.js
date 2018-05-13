@@ -8,7 +8,7 @@ const Router = EmberRouter.extend({
 
 Router.map(function() {
   this.route('button-link-text');
-  this.route('a11y-2');
+  this.route('form-elements');
   this.route('a11y-3');
 });
 
