@@ -14,6 +14,7 @@ Router.map(function() {
     this.route('list-children');
     this.route('document-structure');
     this.route('color-contrast');
+    this.route('image-description');
   });
 });
 
