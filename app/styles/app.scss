@@ -5,3 +5,12 @@
 @import 'mixins/_main';
 @import 'exercises/_main';
 @import 'components/_main';
+
+.active {
+  font-weight: bold;
+}
+
+.bulleted {
+  list-style: initial;
+  margin-left: 0;
+}
