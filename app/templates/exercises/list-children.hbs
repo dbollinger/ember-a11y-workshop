@@ -11,13 +11,19 @@
     </li>
   {{/c.instructions}}
 
-  {{#c.results}}
-    <ul class="list-children-list">
+  {{#c.resources}}
+    <li>
+      TBD
+    </li>
+  {{/c.resources}}
+
+  {{#c.exercise}}
+    <ul class="list-children-list bulleted">
       {{list-adder onItemCreated=(action 'addItem')}}
 
       {{#each items as |item|}}
         <li>{{item}}</li>
       {{/each}}
     </ul>
-  {{/c.results}}
+  {{/c.exercise}}
 {{/exercise-layout}}

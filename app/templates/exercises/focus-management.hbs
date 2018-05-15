@@ -21,7 +21,13 @@
     <li>Add a role of 'dialog' to the <code>a11y-workshop-modal.js</code> component.</li>
   {{/c.instructions}}
 
-  {{#c.results}}
+  {{#c.resources}}
+    <li>
+      TBD
+    </li>
+  {{/c.resources}}
+
+  {{#c.exercise}}
     <div class="exercise-3-controls">
       <button onclick={{action (mut showModal) (not showModal)}}>Show Modal</button>
       <div>
@@ -31,7 +37,7 @@
         <button>This button doesn't do anything</button>
       </div>
     </div>
-  {{/c.results}}
+  {{/c.exercise}}
 {{/exercise-layout}}
 
 {{#if showModal}}

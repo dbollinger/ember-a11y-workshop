@@ -31,7 +31,13 @@
     </li>
   {{/c.instructions}}
 
-  {{#c.results}}
+  {{#c.resources}}
+    <li>
+      TBD
+    </li>
+  {{/c.resources}}
+
+  {{#c.exercise}}
     <ul class="user-profiles-list">
       {{#each model as |user|}}
         <li class="user-profiles-list-item">
@@ -39,5 +45,5 @@
         </li>
       {{/each}}
     </ul>
-  {{/c.results}}
+  {{/c.exercise}}
 {{/exercise-layout}}

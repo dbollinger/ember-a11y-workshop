@@ -3,37 +3,54 @@
     <h1>{{heading}}</h1>
   </div>
 </header>
-<div class="a11y-exercise">
-  <contentinfo role="contentinfo">
+
+<contentinfo role="contentinfo">
+  <div class="a11y-exercise">
     <h2 id="ally-learning-objectives">Learning Objectives</h2>
-    <div class="a11y-exercise-learning-objectives">
-      <ol aria-labelledby="ally-learning-objectives">
-        {{yield (hash
-          objectives=(component 'pass-through')
-          instructions=(component 'x-empty')
-          results=(component 'x-empty')
-        )}}
-      </ol>
-    </div>
+    <ol aria-labelledby="ally-learning-objectives">
+      {{yield (hash
+        objectives=(component 'pass-through')
+        instructions=(component 'x-empty')
+        resources=(component 'x-empty')
+        exercise=(component 'x-empty')
+      )}}
+    </ol>
+  </div>
+
+
+  <div class="a11y-exercise">
     <h2 id="a11y-instructions">Instructions</h2>
-    <div class="a11y-exercise-instructions">
-      <ol aria-labelledby="a11y-instructions">
-        {{yield (hash
-          objectives=(component 'x-empty')
-          instructions=(component 'pass-through')
-          results=(component 'x-empty')
-        )}}
-      </ol>
-    </div>
-  </contentinfo>
-  <main>
-    <h2 id="ally-results">Results</h2>
-    <div class="a11y-exercise-results">
+    <ol aria-labelledby="a11y-instructions">
+      {{yield (hash
+        objectives=(component 'x-empty')
+        instructions=(component 'pass-through')
+        resources=(component 'x-empty')
+        exercise=(component 'x-empty')
+      )}}
+    </ol>
+  </div>
+
+  <div class="a11y-exercise">
+    <h2 id="a11y-resources">Resources</h2>
+    <ol aria-labelledby="a11y-resources">
       {{yield (hash
         objectives=(component 'x-empty')
         instructions=(component 'x-empty')
-        results=(component 'pass-through')
+        resources=(component 'pass-through')
+        exercise=(component 'x-empty')
       )}}
-    </div>
-  </main>
-</div>
+    </ol>
+  </div>
+</contentinfo>
+
+<main class="a11y-exercise">
+  <h2 id="ally-results">Exercise</h2>
+
+  {{yield (hash
+    objectives=(component 'x-empty')
+    instructions=(component 'x-empty')
+    resources=(component 'x-empty')
+    exercise=(component 'pass-through')
+  )}}
+
+</main>

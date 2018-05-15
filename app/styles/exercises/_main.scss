@@ -1,7 +1,6 @@
 @import 'button-link-text';
 @import 'focus-management';
 @import 'form-elements';
-@import 'list-children';
 @import 'color-contrast';
 
 .sidebar {
@@ -28,23 +27,14 @@
 }
 
 .a11y-exercise {
-  padding: 1rem;
-  &-learning-objectives {
-    @include card;
-    background: $grey-95;
-    margin-bottom: 1rem;
-  }
+  @include card;
 
-  &-instructions {
-    @include card;
-    background: $grey-95;
-    margin-bottom: 1rem;
-  }
-
-  &-results {
-    @include card;
-    background: $grey-99;
-    margin-bottom: 2rem;
+  background: $grey-95;
+  h2 {
+    padding-left: 1rem;
+    padding-right: 1rem;
     padding-top: 1rem;
+    padding-bottom: 0;
+    margin-bottom: 0;
   }
 }
