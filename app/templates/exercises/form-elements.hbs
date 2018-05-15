@@ -1,53 +1,41 @@
-<header>
-  <div class="page-header">
-    <h1>2. Forms and Form Controls</h1>
-  </div>
-</header>
-<div class="a11y-exercise">
-  <contentinfo role="contentinfo">
-    <h2 id="ally-learning-objectives">Learning Objectives</h2>
-    <div class="a11y-exercise-learning-objectives">
-      <ol aria-labelledby="ally-learning-objectives">
-        <li>
-          Given a form with standard HTML form controls, a developer should be able to use the ember-a11y-testing
-          framework to assert that no accessibility violations exist.
-        </li>
-        <li>
-          Given multiple form components, a developer should be able to configure the form controls to be unique so that
-          no accessibility violations exist.
-        </li>
-      </ol>
-    </div>
-    <h2 id="a11y-instructions">Instructions</h2>
-    <div class="a11y-exercise-instructions">
-      <ol aria-labelledby="a11y-instructions">
-        <li>
-          <p>From the project directory, run the tests for this exercise: <code>ember test -server -f "Exercise
-            2"</code>.</p>
-        </li>
-        <li>
-          Add an a11y audit to the <code>add-user-form</code> integration test.
-        </li>
-        <li>
-          Fix any accessibility violations found in the component's test.
-        </li>
-        <li>
-          Add the <code>submit-feedback-form</code> to the <code>form-elements.hbs</code> in the results section, immediately
-          after the <code>add-user-form</code>.
-        </li>
-        <li>
-          Add an a11y audit to <code>form-elements-test.js</code>.
-        </li>
-        <li>
-          Fix any accessibility violations.
-        </li>
-      </ol>
-    </div>
-  </contentinfo>
-  <main>
-    <h2>Results</h2>
-    <div class="a11y-exercise-results exercise-2-results">
+{{#exercise-layout heading="2. Forms and Form Controls" as |c|}}
+  {{#c.objectives}}
+    <li>
+      Given a form with standard HTML form controls, a developer should be able to use the ember-a11y-testing
+      framework to assert that no accessibility violations exist.
+    </li>
+    <li>
+      Given multiple form components, a developer should be able to configure the form controls to be unique so that
+      no accessibility violations exist.
+    </li>
+  {{/c.objectives}}
+    <li>
+      <p>From the project directory, run the tests for this exercise: <code>ember test -server -f "Exercise
+        2"</code>.</p>
+    </li>
+    <li>
+      Add an a11y audit to the <code>add-user-form</code> integration test.
+    </li>
+    <li>
+      Fix any accessibility violations found in the component's test.
+    </li>
+    <li>
+      Add the <code>submit-feedback-form</code> to the <code>form-elements.hbs</code> in the results section, immediately
+      after the <code>add-user-form</code>.
+    </li>
+    <li>
+      Add an a11y audit to <code>form-elements-test.js</code>.
+    </li>
+    <li>
+      Fix any accessibility violations.
+    </li>
+  {{#c.instructions}}
+
+  {{/c.instructions}}
+
+  {{#c.results}}
+    <div class="exercise-2-results">
       {{add-user-form}}
     </div>
-  </main>
-</div>
+  {{/c.results}}
+{{/exercise-layout}}

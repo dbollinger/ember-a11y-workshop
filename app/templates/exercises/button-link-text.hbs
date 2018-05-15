@@ -1,60 +1,46 @@
-<header>
-  <div class="page-header">
-    <h1>1. Button/Link Labels</h1>
-  </div>
-</header>
-<div class="a11y-exercise">
-  <contentinfo role="contentinfo">
-    <h2 id="ally-learning-objectives">Learning Objectives</h2>
-    <div class="a11y-exercise-learning-objectives">
-      <ol aria-labelledby="ally-learning-objectives">
-        <li>
-          Given an ember component and its relevant test, a developer should be able to use the ember-a11y-testing
-          framework to assert that no a11y violations exist.
+{{#exercise-layout heading="1. Button/Link Labels" as |c|}}
+  {{#c.objectives}}
+    <li>
+      Given an ember component and its relevant test, a developer should be able to use the ember-a11y-testing
+      framework to assert that no a11y violations exist.
+    </li>
+    <li>
+      Given an ember acceptance test, a developer should be able to use the ember-a11y-testing
+      framework to assert that no a11y violations exist.
+    </li>
+    <li>
+      A developer can describe solutions for accessibility issues with button text, color contrast, and alt text.
+    </li>
+    <li>
+      Participants can describe the difference between an "application" rendering test (acceptance) and a "component" rendering test (integration).
+    </li>
+  {{/c.objectives}}
+
+  {{#c.instructions}}
+    <li>
+      <p>From the project directory, run the tests for this exercise: <code>ember test -server -f "Exercise 1"</code>.</p>
+    </li>
+    <li>
+      Add an a11y audit to the component's integration test.
+    </li>
+    <li>
+      Fix any accessibility violations found in the component's test.
+    </li>
+    <li>
+      Add an additional integration test, with an a11y audit, that selects a user.
+    </li>
+    <li>
+      Fix any remaining accessibility violations found in the component's test.
+    </li>
+  {{/c.instructions}}
+
+  {{#c.results}}
+    <ul class="user-profiles-list">
+      {{#each model as |user|}}
+        <li class="user-profiles-list-item">
+          {{user-profile user=user}}
         </li>
-        <li>
-          Given an ember acceptance test, a developer should be able to use the ember-a11y-testing
-          framework to assert that no a11y violations exist.
-        </li>
-        <li>
-          A developer can describe solutions for accessibility issues with button text, color contrast, and alt text.
-        </li>
-        <li>
-          Participants can describe the difference between an "application" rendering test (acceptance) and a "component" rendering test (integration).
-        </li>
-      </ol>
-    </div>
-    <h2 id="a11y-instructions">Instructions</h2>
-    <div class="a11y-exercise-instructions">
-      <ol aria-labelledby="a11y-instructions">
-        <li>
-          <p>From the project directory, run the tests for this exercise: <code>ember test -server -f "Exercise 1"</code>.</p>
-        </li>
-        <li>
-          Add an a11y audit to the component's integration test.
-        </li>
-        <li>
-          Fix any accessibility violations found in the component's test.
-        </li>
-        <li>
-          Add an additional integration test, with an a11y audit, that selects a user.
-        </li>
-        <li>
-          Fix any remaining accessibility violations found in the component's test.
-        </li>
-      </ol>
-    </div>
-  </contentinfo>
-  <main>
-    <h2 id="ally-results">Results</h2>
-    <div class="a11y-exercise-results">
-      <ul class="user-profiles-list">
-        {{#each model as |user|}}
-          <li class="user-profiles-list-item">
-            {{user-profile user=user}}
-          </li>
-        {{/each}}
-      </ul>
-    </div>
-  </main>
-</div>
+      {{/each}}
+    </ul>
+  {{/c.results}}
+{{/exercise-layout}}
