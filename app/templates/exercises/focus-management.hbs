@@ -11,14 +11,23 @@
   {{/c.objectives}}
 
   {{#c.instructions}}
-    <li>Update the <code>a11y-workshop-modal.js</code> component to focus the modal content after it renders.</li>
-    <li>Add an a11y audit to the <code>focus-management-test.js</code> test.</li>
-    <li>Fix all accessibility violations.</li>
-    <li>Use aria attributes in the <code>a11y-workshop-modal.js</code> component to be labelled by the title in the
-      modal.
+    <li>
+      Run tests: <a href="http://localhost:4200/tests?testId=3aabbaf0">http://localhost:4200/tests?testId=3aabbaf0</a>
     </li>
-    <li>Use aria attributes in the <code>a11y-workshop-modal.js</code> component to be described by hidden text that describes the modal.</li>
-    <li>Add a role of 'dialog' to the <code>a11y-workshop-modal.js</code> component.</li>
+    <li>Click "Show Modal"</li>
+    <li>Run aXe audit on this page.</li>
+    <li>Fix the accessibility issues.</li>
+    <li>
+      Use aria attributes in the <code>a11y-workshop-modal.js</code> component
+      to be labelled by the title in the modal.
+    </li>
+    <li>
+      Use aria attributes in the <code>a11y-workshop-modal.js</code> component
+      to be described by hidden text that describes the modal.
+    </li>
+    <li>
+      Add a role of 'dialog' to the <code>a11y-workshop-modal.js</code> component.
+    </li>
   {{/c.instructions}}
 
   {{#c.resources}}
@@ -36,9 +45,6 @@
   {{#c.exercise}}
     <div class="exercise-3-controls">
       <button onclick={{action (mut showModal) (not showModal)}}>Show Modal</button>
-      <div>
-        {{link-to 'Back to all exercises' 'index'}}
-      </div>
       <div>
         <button>This button doesn't do anything</button>
       </div>
