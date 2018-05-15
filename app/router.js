@@ -7,12 +7,14 @@ const Router = EmberRouter.extend({
 });
 
 Router.map(function() {
-  this.route('button-link-text');
-  this.route('form-elements');
-  this.route('focus-management');
-  this.route('list-children');
-  this.route('document-structure');
-  this.route('color-contrast');
+  this.route('exercises', function() {
+    this.route('button-link-text');
+    this.route('form-elements');
+    this.route('focus-management');
+    this.route('list-children');
+    this.route('document-structure');
+    this.route('color-contrast');
+  });
 });
 
 export default Router;

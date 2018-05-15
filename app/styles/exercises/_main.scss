@@ -4,6 +4,17 @@
 @import 'list-children';
 @import 'color-contrast';
 
+.sidebar {
+  display: inline-block;
+  width: 240px;
+  vertical-align: top;
+}
+
+.main {
+  display: inline-block;
+  width: 850px;
+}
+
 .page-header {
   border-bottom: 1px solid $grey-80;
   background: white;

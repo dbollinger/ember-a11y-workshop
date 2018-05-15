@@ -1,9 +1,6 @@
 <header>
   <div class="page-header">
-    <h1>Exercise 6 - Color Contrast</h1>
-    <div>
-      {{link-to 'View all exercises' 'index'}}
-    </div>
+    <h1>4. List Children</h1>
   </div>
 </header>
 <div class="a11y-exercise">
@@ -11,29 +8,30 @@
     <h2 id="ally-learning-objectives">Learning Objectives</h2>
     <div class="a11y-exercise-learning-objectives">
       <ol aria-labelledby="ally-learning-objectives">
-        <li>TBD</li>
+        <li>
+          TBD
+        </li>
       </ol>
     </div>
     <h2 id="a11y-instructions">Instructions</h2>
     <div class="a11y-exercise-instructions">
       <ol aria-labelledby="a11y-instructions">
-        <li>TBD</li>
+        <li>
+          TBD
+        </li>
       </ol>
     </div>
   </contentinfo>
   <main>
-    <h2>Results</h2>
+    <h2 id="ally-results">Results</h2>
     <div class="a11y-exercise-results">
+      <ul class="list-children-list">
+        {{list-adder onItemCreated=(action 'addItem')}}
 
-      <div class="brand-logo">
-        Cool Brand!
-      </div>
-
+        {{#each items as |item|}}
+          <li>{{item}}</li>
+        {{/each}}
+      </ul>
     </div>
   </main>
 </div>
-
-
-
-
-
