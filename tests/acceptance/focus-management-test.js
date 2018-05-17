@@ -6,8 +6,8 @@ import a11yAudit from 'ember-a11y-testing/test-support/audit';
 module('Acceptance | Exercise | focus management', function(hooks) {
   setupApplicationTest(hooks);
 
-  test('visiting /focus-management', async function(assert) {
-    await visit('/focus-management');
+  test('visiting /exercises/focus-management', async function(assert) {
+    await visit('/exercises/focus-management');
     await click('.exercise-3-controls>button');
 
     let axeOptions = {

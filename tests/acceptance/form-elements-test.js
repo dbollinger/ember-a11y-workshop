@@ -6,8 +6,8 @@ import a11yAudit from 'ember-a11y-testing/test-support/audit';
 module('Acceptance | Exercise | form elements', function(hooks) {
   setupApplicationTest(hooks);
 
-  test('visiting /form-elements', async function(assert) {
-    await visit('/form-elements');
+  test('visiting /exercises/form-elements', async function(assert) {
+    await visit('/exercises/form-elements');
 
     let axeOptions = {}; //just use default options
     await a11yAudit(axeOptions);

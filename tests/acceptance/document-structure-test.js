@@ -6,8 +6,8 @@ import a11yAudit from 'ember-a11y-testing/test-support/audit';
 module('Acceptance | Exercise | document structure', function(hooks) {
   setupApplicationTest(hooks);
 
-  test('visiting /document-structure', async function(assert) {
-    await visit('/document-structure');
+  test('visiting /exercises/document-structure', async function(assert) {
+    await visit('/exercises/document-structure');
 
     let axeOptions = {};
     await a11yAudit(axeOptions);

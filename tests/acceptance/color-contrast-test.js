@@ -6,8 +6,8 @@ import a11yAudit from 'ember-a11y-testing/test-support/audit';
 module('Acceptance | Exercise | color contrast', function(hooks) {
   setupApplicationTest(hooks);
 
-  test('visiting /color-contrast', async function(assert) {
-    await visit('/color-contrast');
+  test('visiting /exercises/color-contrast', async function(assert) {
+    await visit('/exercises/color-contrast');
 
     let axeOptions = {};
     await a11yAudit(axeOptions);

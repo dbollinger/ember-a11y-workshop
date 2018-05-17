@@ -8,8 +8,8 @@ module('Acceptance | Exercise | image description text', function(hooks) {
   setupApplicationTest(hooks);
   setupMirage(hooks);
 
-  test('visiting /image-description', async function(assert) {
-    await visit('/image-description');
+  test('visiting /exercises/image-description', async function(assert) {
+    await visit('/exercises/image-description');
 
     let axeOptions = {}; //just use default options
     await a11yAudit(axeOptions);
