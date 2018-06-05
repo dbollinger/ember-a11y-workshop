@@ -2,38 +2,40 @@
 {{#unless isSubmitted}}
   <form onsubmit={{action 'addUser'}}>
     <div class="add-user-form-control">
-      <label>First Name</label>
-      <input type="text" placeholder="Johnny"/>
+      <label for="first-name">First Name</label>
+      <input id="first-name" type="text" placeholder="Johnny"/>
     </div>
 
     <div class="add-user-form-control">
-      <label>Last Name</label>
-      <input type="text" placeholder="Appleseed"/>
+      <label for="last-name" >Last Name</label>
+      <input id="last-name" type="text" placeholder="Appleseed"/>
     </div>
 
     <div class="add-user-form-control">
-      <label>Age</label>
-      <input type="text" placeholder="42"/>
+      <label for="age">Age</label>
+      <input id="age" type="text" placeholder="42"/>
     </div>
 
     <div class="add-user-form-control">
-      <label>Biography</label>
-      <textarea></textarea>
+      <label for="bio">Biography</label>
+      <textarea id="bio"></textarea>
     </div>
 
     <div class="add-user-form-radio-group-control">
-      <label>User Type</label>
-      <div>
-        <input type="radio" name="user-type">
-        <label>Administrator</label>
-      </div>
-      <div>
-        <input type="radio" name="user-type">
-        <label>Superuser</label>
-      </div>
-      <div>
-        <input type="radio" name="user-type">
-        <label>Developer</label>
+      <label id="user-type-label">User Type</label>
+      <div role="radiogroup" aria-labelledby="user-type-label">
+        <div>
+          <input id="admin-type" type="radio" name="user-type">
+          <label for="admin-type">Administrator</label>
+        </div>
+        <div>
+          <input id="super-type" type="radio" name="user-type">
+          <label for="super-type">Superuser</label>
+        </div>
+        <div>
+          <input id="dev-type" type="radio" name="user-type">
+          <label for="dev-type">Developer</label>
+        </div>
       </div>
     </div>
     <button type="submit">

@@ -8,6 +8,6 @@
 <div class="user-profile-engage">
   <button class="a11y-workshop-icon-button {{if isSelected 'user-profile-engage-remove' 'user-profile-engage-add'}}"
           onclick={{action (mut isSelected) (not isSelected)}}>
-    {{svg-jar 'plus'}}
+    {{svg-jar 'plus'}} <span class="screen-reader-only">{{if isSelected 'Remove' 'Add'}} {{user.firstName}} {{user.lastName}}</span>
   </button>
 </div>
