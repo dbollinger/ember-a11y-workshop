@@ -13,7 +13,7 @@ module('Acceptance | Exercise | color contrast', function(hooks) {
     await a11yAudit(axeOptions);
     assert.ok(true, 'no a11y errors found!');
 
-    await click('.disable-brands');
+    await click('#toggle-disabled-state');
 
     await a11yAudit(axeOptions);
     assert.ok(true, 'no a11y errors found!');
