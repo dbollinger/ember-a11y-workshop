@@ -9,7 +9,20 @@ module('Acceptance | Exercise | document structure', function(hooks) {
   test('visiting /exercises/document-structure', async function(assert) {
     await visit('/exercises/document-structure');
 
-    let axeOptions = {};
+    let axeOptions = {
+      rules: {
+        'landmark-one-main': {
+          enabled: true
+        },
+        'page-has-heading-one': {
+          enabled: true
+        },
+        'region': {
+          enabled: true
+        }
+      }
+    };
+
     await a11yAudit(axeOptions);
     assert.ok(true, 'no a11y errors found!');
   });
