@@ -13,3 +13,11 @@
 .screen-reader-only {
   @include screen-reader-only;
 }
+
+article {
+  padding: 16px;
+
+  p {
+    margin-top: 14px;
+  }
+}

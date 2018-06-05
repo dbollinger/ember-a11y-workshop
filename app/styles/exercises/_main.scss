@@ -1,6 +1,18 @@
-@import 'exercise-1';
-@import 'exercise-2';
-@import 'exercise-3';
+@import 'button-link-text';
+@import 'focus-management';
+@import 'form-elements';
+@import 'color-contrast';
+
+.sidebar {
+  display: inline-block;
+  width: 240px;
+  vertical-align: top;
+}
+
+.main {
+  display: inline-block;
+  width: 850px;
+}
 
 .page-header {
   border-bottom: 1px solid $grey-80;
@@ -15,23 +27,14 @@
 }
 
 .a11y-exercise {
-  padding: 1rem;
-  &-learning-objectives {
-    @include card;
-    background: $grey-95;
-    margin-bottom: 1rem;
-  }
+  @include card;
 
-  &-instructions {
-    @include card;
-    background: $grey-95;
-    margin-bottom: 1rem;
-  }
-
-  &-results {
-    @include card;
-    background: $grey-99;
-    margin-bottom: 2rem;
+  background: $grey-95;
+  h2 {
+    padding-left: 1rem;
+    padding-right: 1rem;
     padding-top: 1rem;
+    padding-bottom: 0;
+    margin-bottom: 0;
   }
 }

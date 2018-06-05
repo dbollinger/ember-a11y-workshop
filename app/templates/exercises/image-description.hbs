@@ -1,0 +1,59 @@
+{{#exercise-layout heading="Image Descriptions" as |c|}}
+  {{#c.instructions}}
+    <li>
+      Run tests: <a href="http://localhost:4200/tests?testId=b9db379d">http://localhost:4200/tests?testId=b9db379d</a>
+    </li>
+    <li>
+      Run aXe audit on this page.
+    </li>
+    <li>
+      Fix the accessibility issues.
+    </li>
+  {{/c.instructions}}
+
+  {{#c.resources}}
+    <ul aria-labelledby="a11y-resources">
+      <li>
+        <a href="https://moz.com/learn/seo/alt-text">Writing Effective Alt Text</a>
+      </li>
+      <li>
+        <a href="https://dequeuniversity.com/rules/axe/3.0/image-alt">Rule: Images must have alternate text</a>
+      </li>
+    </ul>
+
+    <h4>Image Alt Text</h4>
+    <ul>
+      <li>
+        <code>alt=""</code> intentionally skip element
+      </li>
+      <li>
+        <code>alt="UPPERCASE"</code> individually reads letters
+      </li>
+    </ul>
+  {{/c.resources}}
+
+  {{#c.exercise}}
+
+    <article>
+      Here is a photo album of my favorite things:
+
+      <ul class="plain-list">
+        <li>
+          <img class="photo"
+            src="https://vignette.wikia.nocookie.net/muppet/images/5/5a/Elmo-elmo-elmo.jpg/revision/latest?cb=20110917000614"
+            >
+        </li>
+        <li>
+          <img class="photo"
+            src="https://i.pinimg.com/originals/84/e7/14/84e714a57a1bbf21f0ebd0695fd4bafd.jpg"
+            >
+        </li>
+        <li>
+          <img class="photo"
+            src="https://www.mathsisfun.com/data/images/line-graph-example.svg"
+            >
+        </li>
+      </ul>
+    </article>
+  {{/c.exercise}}
+{{/exercise-layout}}

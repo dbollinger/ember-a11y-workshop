@@ -1,0 +1,41 @@
+{{#exercise-layout heading="Forms and Form Controls" as |c|}}
+  {{#c.objectives}}
+    <li>
+      Given a form with standard HTML form controls, a developer should be able to use the ember-a11y-testing
+      framework to assert that no accessibility violations exist.
+    </li>
+    <li>
+      Given multiple form components, a developer should be able to configure the form controls to be unique so that
+      no accessibility violations exist.
+    </li>
+  {{/c.objectives}}
+
+  {{#c.instructions}}
+    <li>
+      Run tests: <a href="http://localhost:4200/tests?testId=6230e572">http://localhost:4200/tests?testId=6230e572</a>
+    </li>
+    <li>
+      Run aXe audit on this page.
+    </li>
+    <li>
+      Fix the accessibility issues.
+    </li>
+  {{/c.instructions}}
+
+  {{#c.resources}}
+    <ul aria-labelledby="a11y-resources">
+      <li>
+        <a href="https://dequeuniversity.com/rules/axe/3.0/label">Rule: Form elements must have labels</a>
+      </li>
+      <li>
+        <a href="https://dequeuniversity.com/rules/axe/3.0/radiogroup">Rule: Radio inputs with the same name attribute value must be part of a group</a>
+      </li>
+    </ul>
+  {{/c.resources}}
+
+  {{#c.exercise}}
+    <div class="exercise-2-results">
+      {{add-user-form}}
+    </div>
+  {{/c.exercise}}
+{{/exercise-layout}}

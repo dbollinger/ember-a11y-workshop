@@ -1,0 +1,37 @@
+{{#exercise-layout heading="List Children" as |c|}}
+  {{#c.objectives}}
+    <li>
+      TBD
+    </li>
+  {{/c.objectives}}
+
+  {{#c.instructions}}
+    <li>
+      Run tests: <a href="http://localhost:4200/tests?testId=f9b9584e">http://localhost:4200/tests?testId=f9b9584e</a>
+    </li>
+    <li>
+      Run aXe audit on this page.
+    </li>
+    <li>
+      Fix the accessibility issues.
+    </li>
+  {{/c.instructions}}
+
+  {{#c.resources}}
+    <ul aria-labelledby="a11y-resources">
+      <li>
+        <a href="https://dequeuniversity.com/rules/axe/3.0/list">Rule: &gt;ul&lt; and &gt;ol&lt; must only directly contain &gt;li&lt; content elements</a>
+      </li>
+    </ul>
+  {{/c.resources}}
+
+  {{#c.exercise}}
+    <ul class="list-children-list">
+      {{list-adder onItemCreated=(action 'addItem')}}
+
+      {{#each items as |item|}}
+        <li>{{item}}</li>
+      {{/each}}
+    </ul>
+  {{/c.exercise}}
+{{/exercise-layout}}

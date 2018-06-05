@@ -7,10 +7,15 @@ const Router = EmberRouter.extend({
 });
 
 Router.map(function() {
-  this.route('a11y-1');
-  this.route('a11y-2');
-  this.route('a11y-3');
-  this.route('a11y-activities');
+  this.route('exercises', function() {
+    this.route('button-link-text');
+    this.route('form-elements');
+    this.route('focus-management');
+    this.route('list-children');
+    this.route('document-structure');
+    this.route('color-contrast');
+    this.route('image-description');
+  });
 });
 
 export default Router;

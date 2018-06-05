@@ -10,7 +10,7 @@ export default Factory.extend({
   },
 
   bio(){
-    return faker.lorem.sentences(5);
+    return faker.lorem.sentences(2);
   },
 
   profileImage() {

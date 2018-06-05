@@ -1,0 +1,35 @@
+{{#exercise-layout heading="Color Contrast" as |c|}}
+  {{#c.objectives}}
+    <li>TBD</li>
+  {{/c.objectives}}
+
+  {{#c.instructions}}
+    <li>
+      Run tests: <a href="http://localhost:4200/tests?testId=708872f0">http://localhost:4200/tests?testId=708872f0</a>
+    </li>
+    <li>
+      Run aXe audit on this page.
+    </li>
+    <li>
+      Click the Spectrum Chrome Extension Icon and toggle back and forth between "Normal" and "Protanopia".
+    </li>
+    <li>Fix the accessibility issues.</li>
+  {{/c.instructions}}
+
+  {{#c.resources}}
+    <ul aria-labelledby="a11y-resources">
+      <li>
+        <a href="https://chrome.google.com/webstore/detail/spectrum/ofclemegkcmilinpcimpjkfhjfgmhieb/related">Chrome Extension: Spectrum</a>
+      </li>
+      <li>
+        <a href="https://dequeuniversity.com/rules/axe/3.0/color-contrast">Rule: Text elements must have sufficient color contrast against the background</a>
+      </li>
+    </ul>
+  {{/c.resources}}
+
+  {{#c.exercise}}
+    <div class="brand-logo">
+      Cool Brand!
+    </div>
+  {{/c.exercise}}
+{{/exercise-layout}}

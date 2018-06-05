@@ -1,0 +1,84 @@
+{{#exercise-layout heading="Notifications and Focus Management" as |c|}}
+  {{#c.objectives}}
+    <li>Participants should be able to use ember conventions to draw attention (focus) to a component.</li>
+    <li>Participants should be able to use roles and aria attributes to make a "modal component" more accessible
+      to keyboard and screen reader users.
+    </li>
+    <li>Participants should understand when it is appropriate to use tabindex, and which values are appropriate to
+      use with tabindex.
+    </li>
+    <li>Participants should be able to describe the heading-order and tabindex AXE rules.</li>
+  {{/c.objectives}}
+
+  {{#c.instructions}}
+    <li>
+      Run tests: <a href="http://localhost:4200/tests?testId=3aabbaf0">http://localhost:4200/tests?testId=3aabbaf0</a>
+    </li>
+    <li>Click "Show Modal"</li>
+    <li>Run aXe audit on this page.</li>
+    <li>Fix the accessibility issues.</li>
+
+    <li>Navigate to the "Show Modal" button by tabbing.</li>
+    <li>Hit "space" to trigger the modal".</li>
+    <li>Hit "tab" until you get into the modal. Notice how the focus is allowed behind the modal screen.</li>
+    <li>Use the FocusTrap mixin to capture the focus when the modal is invoked.</li>
+
+    <li>
+      Use aria attributes in the <code>a11y-workshop-modal.js</code> component
+      to be labelled by the title in the modal.
+    </li>
+    <li>
+      Use aria attributes in the <code>a11y-workshop-modal.js</code> component
+      to be described by hidden text that describes the modal.
+    </li>
+    <li>
+      Add a role of 'dialog' to the <code>a11y-workshop-modal.js</code> component.
+    </li>
+  {{/c.instructions}}
+
+  {{#c.resources}}
+    <ul aria-labelledby="a11y-resources">
+      <li>
+        <a href="https://dequeuniversity.com/rules/axe/3.0/heading-order">Rule: Heading levels should only increase by one</a>
+      </li>
+      <li>
+        <a href="https://dequeuniversity.com/rules/axe/3.0/label">Rule: Form elements must have labels</a>
+      </li>
+      <li>
+        <a href="https://dequeuniversity.com/rules/axe/3.0/region">Rule: Content should be contained in a landmark region</a>
+      </li>
+    </ul>
+
+    <h4>Tab Index Values</h4>
+    <ul>
+      <li>a <b>negative</b> value means that the element should be focusable, but should not be reachable via sequential keyboard navigation;</li>
+      <li><b>0</b> means that the element should be focusable and reachable via sequential keyboard navigation, but its relative order is defined by the platform convention;</li>
+      <li>a <b>positive</b> value means should be focusable and reachable via sequential keyboard navigation; its relative order is defined by the value of the attribute: the sequential follow the increasing number of the tabindex. If several elements share the same tabindex, their relative order follows their relative position in the document.</li>
+    </ul>
+  {{/c.resources}}
+
+  {{#c.exercise}}
+    <div class="exercise-3-controls">
+      <button onclick={{action (mut showModal) (not showModal)}}>Show Modal</button>
+      <div>
+        <button>This button doesn't do anything</button>
+      </div>
+    </div>
+  {{/c.exercise}}
+{{/exercise-layout}}
+
+{{#if showModal}}
+  {{#a11y-workshop-modal}}
+    <h4 class="focus-management-modal-heading">This is a modal that requires an action!</h4>
+    <label>Make a choice.</label>
+    <select class="focus-management-modal-select">
+      <option>1</option>
+      <option>2</option>
+      <option>3</option>
+    </select>
+    <div class="focus-management-modal-options">
+      <button onclick={{action (mut showModal) false}}>Dismiss the modal</button>
+      <button onclick={{action (mut somethingExciting) true}}>Do something</button>
+    </div>
+  {{/a11y-workshop-modal}}
+{{/if}}
