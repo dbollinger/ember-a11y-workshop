@@ -1,36 +1,46 @@
 <h3>Add User</h3>
-<form onsubmit={{action 'addUser'}}>
-  <div class="add-user-form-control">
-    <label>First Name</label>
-    <input type="text" placeholder="Johnny"/>
-  </div>
-
-  <div class="add-user-form-control">
-    <label>Last Name</label>
-    <input type="text" placeholder="Appleseed"/>
-  </div>
-
-  <div class="add-user-form-control">
-    <label>Biography</label>
-    <textarea></textarea>
-  </div>
-
-  <div class="add-user-form-radio-group-control">
-    <label>User Type</label>
-    <div>
-      <input type="radio" name="user-type">
-      <label>Administrator</label>
+{{#unless isSubmitted}}
+  <form onsubmit={{action 'addUser'}}>
+    <div class="add-user-form-control">
+      <label>First Name</label>
+      <input type="text" placeholder="Johnny"/>
     </div>
-    <div>
-      <input type="radio" name="user-type">
-      <label>Superuser</label>
+
+    <div class="add-user-form-control">
+      <label>Last Name</label>
+      <input type="text" placeholder="Appleseed"/>
     </div>
-    <div>
-      <input type="radio" name="user-type">
-      <label>Developer</label>
+
+    <div class="add-user-form-control">
+      <label>Age</label>
+      <input type="text" placeholder="42"/>
     </div>
-  </div>
-  <button type="submit">
-    Add user
-  </button>
-</form>
+
+    <div class="add-user-form-control">
+      <label>Biography</label>
+      <textarea></textarea>
+    </div>
+
+    <div class="add-user-form-radio-group-control">
+      <label>User Type</label>
+      <div>
+        <input type="radio" name="user-type">
+        <label>Administrator</label>
+      </div>
+      <div>
+        <input type="radio" name="user-type">
+        <label>Superuser</label>
+      </div>
+      <div>
+        <input type="radio" name="user-type">
+        <label>Developer</label>
+      </div>
+    </div>
+    <button type="submit">
+      Add user
+    </button>
+  </form>
+{{else}}
+  <div>Thank you! The form has been submitted.</div>
+  <button onclick={{action 'resetForm'}}>Reset Form</button>
+{{/unless}}
