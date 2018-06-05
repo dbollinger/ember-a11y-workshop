@@ -26,8 +26,9 @@
   {{/c.resources}}
 
   {{#c.exercise}}
+    {{list-adder onItemCreated=(action 'addItem')}}
+
     <ul class="list-children-list">
-      {{list-adder onItemCreated=(action 'addItem')}}
 
       {{#each items as |item|}}
         <li>{{item}}</li>

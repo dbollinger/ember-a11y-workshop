@@ -1,7 +1,7 @@
 import Component from '@ember/component';
-/*import FocusTrap from '../mixins/focus-trap';*/
+import FocusTrap from '../mixins/focus-trap';
 
-export default Component.extend(/*FocusTrap,*/ {
+export default Component.extend(FocusTrap, {
 
   classNames: ['a11y-workshop-modal'],
   attributeBindings: ['tabindex', 'ariaLabelledby:aria-labelledby', 'ariaDescribedby:aria-describedby'],
@@ -11,7 +11,7 @@ export default Component.extend(/*FocusTrap,*/ {
    * @argument tabindex
    * @type Number
    */
-  tabindex: null,
+  tabindex: -1,
 
   /**
    * The id of the element that labels the modal content.
@@ -27,7 +27,7 @@ export default Component.extend(/*FocusTrap,*/ {
    */
   ariaDescribedby: null,
 
-  didRender() {
-
+  didInsertElement() {
+    this.element.focus();
   }
 });
