@@ -11,13 +11,7 @@ module('Acceptance | Exercise | document structure', function(hooks) {
 
     let axeOptions = {
       rules: {
-        'landmark-one-main': {
-          enabled: true
-        },
-        'page-has-heading-one': {
-          enabled: true
-        },
-        'region': {
+        'heading-order': {
           enabled: true
         }
       }

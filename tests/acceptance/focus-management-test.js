@@ -10,13 +10,7 @@ module('Acceptance | Exercise | focus management', function(hooks) {
     await visit('/exercises/focus-management');
     await click('.exercise-3-controls>button');
 
-    let axeOptions = {
-      rules: {
-        'heading-order': {
-          enabled: true
-        },
-      }
-    };
+    let axeOptions = {};
 
     await a11yAudit(axeOptions);
     assert.ok(true, 'no a11y errors found!');
