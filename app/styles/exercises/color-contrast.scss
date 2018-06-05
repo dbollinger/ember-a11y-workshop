@@ -1,11 +1,43 @@
+.brand-logos {
+  display: flex;
+  flex-wrap: wrap;
+}
+
 .brand-logo {
-  color: #ffdf05;
-  background-color: #3fff00;
-
-  font-weight: bold;
-
   text-align: center;
   width: 90px;
   padding: 10px;
-  margin: 10px;
+  margin: 0 1rem 1rem 1rem;
+
+  &.disabled{
+    cursor: not-allowed;
+    background-color: #888;
+    color: white;
+  }
+
+  &-red {
+    background-color: #fa0000;
+    color: white;
+  }
+  &-green {
+    background-color: #3fff00;
+    color: #ffdf05;
+  }
+  &-blue {
+    color: white;
+    background-color: #7777cc;
+  }
+  &-orange {
+    background-color: darkorange;
+    color: white;
+  }
+  &-black {
+    background-color: #777777;
+    color: white;
+  }
+  &-white {
+    background-color: white;
+    color: darken(mediumaquamarine, 25%);
+    border: 1px solid $grey-50;
+  }
 }

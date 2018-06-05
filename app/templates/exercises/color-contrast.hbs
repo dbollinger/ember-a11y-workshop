@@ -19,17 +19,46 @@
   {{#c.resources}}
     <ul aria-labelledby="a11y-resources">
       <li>
-        <a href="https://chrome.google.com/webstore/detail/spectrum/ofclemegkcmilinpcimpjkfhjfgmhieb/related">Chrome Extension: Spectrum</a>
+        <a href="https://chrome.google.com/webstore/detail/spectrum/ofclemegkcmilinpcimpjkfhjfgmhieb/related">Chrome
+          Extension: Spectrum</a>
       </li>
       <li>
-        <a href="https://dequeuniversity.com/rules/axe/3.0/color-contrast">Rule: Text elements must have sufficient color contrast against the background</a>
+        <a href="https://dequeuniversity.com/rules/axe/3.0/color-contrast">Rule: Text elements must have sufficient
+          color contrast against the background</a>
       </li>
     </ul>
   {{/c.resources}}
 
   {{#c.exercise}}
-    <div class="brand-logo">
-      Cool Brand!
+    <div class="brand-logos">
+      <div  class="brand-logo brand-logo-red {{if disabled 'disabled'}}">
+        Cool Brand!
+      </div>
+
+      <div class="brand-logo brand-logo-green {{if disabled 'disabled'}}">
+        Cool Brand!
+      </div>
+
+      <div class="brand-logo brand-logo-blue {{if disabled 'disabled'}}">
+        Cool Brand!
+      </div>
+
+      <div class="brand-logo brand-logo-orange {{if disabled 'disabled'}}">
+        Cool Brand!
+      </div>
+
+      <div class="brand-logo brand-logo-black {{if disabled 'disabled'}}">
+        Cool Brand!
+      </div>
+
+      <div class="brand-logo brand-logo-white {{if disabled 'disabled'}}">
+        Cool Brand!
+      </div>
+    </div>
+
+    <div>
+      <input id="toggle-disabled-state" type="checkbox" onclick={{action (mut disabled) value='target.checked'}}/>
+      <label for="toggle-disabled-state">Toggle disabled state</label>
     </div>
   {{/c.exercise}}
 {{/exercise-layout}}
